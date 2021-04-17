@@ -61,10 +61,11 @@ DrTcc
 
 
 
-## 改进方向..
+## 改进方向
 
 1. stack based -> register based
-2. 编译器后端优化.. 
+2. 编译器后端优化.. (还没开始学..枯了)
+3. 争取下一次用更好的OOP在解耦合，争取去掉宏定义(但有时候宏定义真的很好用)，争取下一次更好的 `use C++`
 
 ## 功能/支持
 
@@ -76,8 +77,7 @@ DrTcc
 - [x]  `sizeof`运算
 - [x] 取址和解引用
 - [x] 类型转换
-
-
+- [x] 一些内建函数(printf，malloc....)
 
 ## Test & 截图
 
@@ -105,7 +105,17 @@ int main()
 }
 ```
 
-![](Screenhot/result.png)
+##### 运行结果：
+
+![ ](https://raw.githubusercontent.com/wandsX/DrTcc/main/Screenshot/result.png)
+
+##### 产生的指令：
+
+![213123](https://raw.githubusercontent.com/wandsX/DrTcc/main/Screenshot/ins.png)
+
+
+
+![run](https://github.com/wandsX/DrTcc/raw/main/Screenshot/result.png)
 
 
 
@@ -117,19 +127,19 @@ int main()
 make 
 ```
 
-`bin/xc.txt` 是[write-a-C-interpreter](https://github.com/lotabout/write-a-C-interpreter) 源码，`happy.exe`是我们的最终程序，我们可以：
+直接编译你的源文件
 
 ```
 .\happy.exe SourceCodeFile
 ```
 
-也可以递归下去实现[write-a-C-interpreter](https://github.com/lotabout/write-a-C-interpreter)的自举
+`bin/xc.txt` 是[write-a-C-interpreter](https://github.com/lotabout/write-a-C-interpreter) 源码，递归下去实现[write-a-C-interpreter](https://github.com/lotabout/write-a-C-interpreter)的自举
 
 ```
 .\happy xc.txt xc.txt ... 
 ```
 
-或者
+或者先编译xc.txt 再编译你的源文件
 
 ```
 .\happy xc.txt YourSourceCodeFile
