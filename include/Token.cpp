@@ -7,7 +7,6 @@
 namespace DrTcc
 {
 
-
     std::string LexerTypeList[] = {
             "none",
             "ptr",

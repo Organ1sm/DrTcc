@@ -4,7 +4,8 @@
 
 #include "GenCode.h"
 
-#define GEN_DEBUG 1
+#define GEN_DEBUG 0
+
 namespace DrTcc
 {
     std::string ClassStringList[] = {"NotFound", "Enum", "Number", "Func", "Builtin", "Global", "Param", "Local",};

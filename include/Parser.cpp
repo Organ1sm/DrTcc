@@ -19,6 +19,8 @@ namespace DrTcc
         // 清空词法分析结果
         lexer.Reset();
         ast.Reset();
+        
+        // 语法分析
         Program();
 
         return ast.GetRoot();
