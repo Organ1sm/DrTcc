@@ -115,10 +115,6 @@ int main()
 
 
 
-![run](https://github.com/wandsX/DrTcc/raw/main/Screenshot/result.png)
-
-
-
 ## Build  & Run
 
 只支持32位，使用 `Cmake MinGw` build
